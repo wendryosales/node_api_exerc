@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    image: node:16
+    restart: always
+    ports: 
+      - 3001:3001
+    volumes:
+      - ./:/usr/app
+    working_dir: /usr/app
+    command: bash -c "npm install && npm start"
+
